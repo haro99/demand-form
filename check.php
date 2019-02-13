@@ -25,8 +25,10 @@
             <p>要望：<?= $message?></p>
         </div>
         <div class="button">
-            <form>
+            <form action="print.php" method="POST">
                 <!--メールアドレスと要望がかかれていない場合は送信ボタンを表示しないで戻るボタンだけ表示する-->
+                <input type="hidden" name="mail" value=<?=$mail?>>
+                <input type="hidden" name="message" value=<?=$message?> >
                 <?php if(empty($error)&&empty($error2)) print "<input type=\"submit\" value=\"送信\">";?>
                 <input type="button" value="戻る" onclick="history.back()">
             </form>

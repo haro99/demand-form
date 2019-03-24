@@ -12,7 +12,7 @@
             $clean[$key] = htmlspecialchars( $value, ENT_QUOTES);
         }
     }
-    echo var_dump($clean);
+    //echo var_dump($clean);
     if(!empty($clean['btn_kakunin'])){
 
         $error = validation($clean);
